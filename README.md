@@ -1,10 +1,23 @@
 # powerapplet_tray
 
-This is a modified version of powerapplet_tray 2.6 that includes /sys/class/power_supply as a source for battery stats. 
+This is a modified version of 
+[powerapplet_tray 2.6](http://distro.ibiblio.org/puppylinux/sources/p/powerapplet_tray-2.6.tar.bz2)
+that includes /sys/class/power_supply as a source 
+for battery stats in addition to /proc/acpi, and /proc/apm.
 
-I would base this on powerapplet_tray 2.7.2, but I can't find the source for the life of me! :P
+This is just a make-it-work-dammit, so don't expect this to be
+100% stable.
 
-This was designed for my MacBook (13", Mid-2009) on Slacko64-6.3.2, which didn't properly report ACPI stats. As a result, there were no battery stats. 
+I would base this on powerapplet_tray 2.7.2, but I can't find the 
+source for the life of me! :P
+
+This was designed for my MacBook (13", Mid-2009) on
+Slacko64-6.3.2, which didn't properly report ACPI stats. 
+As a result, there was no battery icon in the tray. 
+
+I have also rearranged some code, added a few error checks,
+and added comments, including one of the most complicated Bash
+one-liners in history. 
 
 ## Compiling and building
 
@@ -18,9 +31,7 @@ cd /path/to/powerapplet_tray
 cp *.svg /usr/share/pixmaps/puppy/
 ```
 
-
 #### Testing
-
 
 ```
 ./powerapplet_tray
